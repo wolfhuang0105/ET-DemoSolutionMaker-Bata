@@ -1,0 +1,29 @@
+{
+  "_note_overview": "Proposal Generator 顧問簽名設定。與 v576（KYC/通話記錄工具）共用同一份 gas_url 與 sheet_url，偏好資料完全同步。Proposal Generator 獨有的 title 硬編碼為「ETalking Kids 課程顧問」，不寫進 GAS。",
+
+  "_gas_url_note": "v576 共用 GAS Web App URL。在任一工具改顧問資料，兩邊都會同步。",
+  "gas_url": "https://script.google.com/macros/s/AKfycbz7ydX6cc_K_y0U97H4_2Ho5nONOvJtVOxe5EqVZVukheTDsi3Nt1CUhIcfQjIv5Cvw/exec",
+
+  "_sheet_url_note": "班表 Google Sheet URL，抓當期顧問名單。與 v576 同一份。",
+  "sheet_url": "https://docs.google.com/spreadsheets/d/13SrI50MGBAJHcRqFXa2TT5EDki3EGd0YL5wAGKXzPuw/edit?gid=1534602765#gid=1534602765",
+
+  "_parse_rules_note": "班表 TSV 解析規則，與 v576 一致。",
+  "parse_rules": {
+    "row_anchor":   "12點半",
+    "cn_pattern":   "^[\\u4e00-\\u9fff]{2,5}$",
+    "en_pattern":   "^[A-Za-z]{2,15}$",
+    "phone_prefix": "(02) 2760-7768 #6",
+    "email_domain": "@etalkingonline.com"
+  },
+
+  "_consultants_note": "硬編碼 fallback。班表抓取失敗時使用；或作為班表自動生成顧問的補充（匹配 id 或英文名時覆蓋預設聯絡方式）。GAS 偏好優先權 > 此處硬編碼。",
+  "consultants": [
+    {
+      "id":     "wolf",
+      "name":   "Wolf 黃",
+      "phone":  "(02) 2760-7768 #622",
+      "email":  "Wolf.Huang@etalkingonline.com",
+      "lineId": "verypigkimo"
+    }
+  ]
+}
